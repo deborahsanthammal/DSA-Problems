@@ -20,4 +20,8 @@ func main() {
 	// Check if a number is an Armstrong number
 	armstrong := checkAmstrongNumber(371)
 	fmt.Printf("Is Armstrong Number: %v\n", armstrong)
+
+	// Get divisors of a number
+	divisors := Divisors(12)
+	fmt.Printf("Divisors: %v\n", divisors)
 }
