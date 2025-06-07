@@ -28,5 +28,15 @@ func main(){
 	fmt.Println("Pattern 6:")
 	printSix(5)
 	fmt.Println("")
+
+	fmt.Println("Pattern 7:")
+	printSeven(5)
+	fmt.Println("")
+
+	fmt.Println("Pattern 8:")
+	printEight(5)
+	fmt.Println("")
+
+
 	
 }
