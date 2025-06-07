@@ -6,10 +6,14 @@ import (
 
 func main() {
 	// Reverse a number
-	reversed := reverseNumber(76543)
+	reversed := reverseNumber(121)
 	fmt.Printf("Reversed Number: %v\n", reversed)
 
 	// Count digits in a number
-	digitCount := countDigits(76543)
+	digitCount := countDigits(121)
 	fmt.Printf("Digit Count: %v\n", digitCount)
+
+	// Check if a number is a palindrome
+	palindrome := checkPalindrome(121)
+	fmt.Printf("Is Palindrome: %v\n", palindrome)
 }
