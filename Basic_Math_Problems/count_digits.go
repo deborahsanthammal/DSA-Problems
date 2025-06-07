@@ -1,8 +1,5 @@
 package main
 
-import (
-	"fmt"
-)
 
 func countDigits(n int) int {
 	var count int = 0
@@ -11,8 +8,4 @@ func countDigits(n int) int {
 		count += 1
 	}
 	return count
-}
-
-func main() {
-	fmt.Printf("%v\n", countDigits(76543))
 }
