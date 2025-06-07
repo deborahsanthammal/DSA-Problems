@@ -24,4 +24,8 @@ func main() {
 	// Get divisors of a number
 	divisors := Divisors(12)
 	fmt.Printf("Divisors: %v\n", divisors)
+
+	// Check if a number is prime
+	prime := isPrime(14)
+	fmt.Printf("Is Prime: %v\n", prime)
 }
