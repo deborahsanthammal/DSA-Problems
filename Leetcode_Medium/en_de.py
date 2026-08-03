@@ -4,29 +4,33 @@ def encode(strs: List[str]) -> str:
         output = ""
 
         for s in strs:
-            if strs.index(s) != len(strs) - 1:
-                output = output + s + "_" 
-            else:
-                output += s
+             output += str(len(s)) + ":" + s
 
         return output
 
 
 def decode(s: str) -> List[str]:
-    print("length: ", len(s))
-    for v in s:
-         print("ascii: ", ord(v))
-    output = s.split("_")
+    length = ""
+    output = []
+    i = 0
+    while i < len(s):
+          if s[i] != ":":
+                length += s[i]
+                i += 1
+          else:
+                word_length = int(length)
+                length = ""
+                word = s[i+1: i+word_length+1]
+                output.append(word)
+                i = i + word_length + 1
 
     return output
 
 
 if __name__ == "__main__":
-    #  input = ["My", "name", "is", "Deborah"]
+    #  input = ["My", "name", ":issssssss", "Deborah"]
      input = ["",""]
      encoded = encode(input)
      print("encoded: ", encoded)
      decoded = decode(encoded)
      print("decoded: ", decoded)
-
-     print("empty strings: ","" + "")
