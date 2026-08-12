@@ -4,7 +4,7 @@ def maxArea(heights: List[int]):
     l, r = 0, len(heights) - 1
     res = 0 
     while l < r:
-        width = r - 1
+        width = r - l
         height = min(heights[l], heights[r])
         area = width * height
         res = max(res, area)
@@ -19,3 +19,4 @@ def maxArea(heights: List[int]):
 if __name__ == "__main__":
     output = maxArea([2,2,2])
     print(output)
+
