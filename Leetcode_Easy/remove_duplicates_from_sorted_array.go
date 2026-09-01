@@ -1,7 +1,7 @@
 package main
 
 import (
-	"fmt"
+	// "fmt"
 	// "slices"
 )
 
@@ -16,9 +16,9 @@ func removeDuplicates(nums []int) {
 	}
 }
 
-func main() {
-	nums := []int{1,1,2,2,3,3,3,4,4,5,5,5,5,5}
-	fmt.Println("Original slice:", nums)
-	removeDuplicates(nums)
-	fmt.Println("Slice after removing duplicates:", nums)
-}
+// func main() {
+// 	nums := []int{1,1,2,2,3,3,3,4,4,5,5,5,5,5}
+// 	fmt.Println("Original slice:", nums)
+// 	removeDuplicates(nums)
+// 	fmt.Println("Slice after removing duplicates:", nums)
+// }
