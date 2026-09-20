@@ -5,6 +5,8 @@ def groupAnagrams(strs: List[str]) -> List[List[str]]:
         result = {}
         for s in strs:
             count = [0] * 26
+            print(count)
+            
 
             for c in s:
                 count[ord(c) - ord("a")] += 1
@@ -12,7 +14,7 @@ def groupAnagrams(strs: List[str]) -> List[List[str]]:
             if tuple(count) in result:
                 result[tuple(count)].append(s)
             else:
-                 result[tuple(count)] = s
+                 result[tuple(count)] = [s]
 
         return result.values()
 
