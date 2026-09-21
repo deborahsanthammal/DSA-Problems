@@ -15,9 +15,10 @@ def topKFrequent(nums: List[int], k: int) -> List[int]:
     for c in count:
         bucket[count[c]].append(c)
 
+    print("bucket: ", bucket)
+
     b = bucket_size - 1
     while b >= 0:
-        print("b: ",b)
         for n in bucket[b]: 
             final.append(n)
         if len(final) == k:
@@ -30,6 +31,6 @@ def topKFrequent(nums: List[int], k: int) -> List[int]:
 
 
 if __name__ == "__main__":
-    topKFrequent([1,2,2,3,3,3], 2)
-    topKFrequent([7,7],1)
-    topKFrequent([1,2],2)
+    topKFrequent([1,2,2,2,3,3,3], 2)
+    # topKFrequent([7,7],1)
+    # topKFrequent([1,2],2)

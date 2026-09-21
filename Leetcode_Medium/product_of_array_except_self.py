@@ -32,37 +32,31 @@ def product_of_array(array : List[int]) -> List[int]:
 
 def product_of_array_optimized(array : List[int]) -> List[int]:
 
-    prefix_array = [0] * len(array)
-    postfix_array = [0] * len(array)
-    output = [0] * len(array)
+    output = [1] * len(array)
 
     i = 1 
-    output[0] = 1
+    prefix = 1
     while i < len(array):
-        output[i] = output[i-1] * array[i]
+        output[i] = prefix
+        prefix *= array[i]
         i += 1
 
     print("output: ", output)
 
     i = len(array) - 1
     # postfix_array[len(array)-1] = array[len(array)-1]
+    postfix = 1
     while i >= 0:
-        if i == len(array) - 1:
-            postfix = 1
-        else:
-            postfix = output[i+1] * array[i]
-        output[i] = output[i] * postfix
+
+        print("b postfix: ", postfix)
+        print("b output: ", output)
+        
+        output[i] *= postfix
+        postfix *= array[i]
+        print("postfix: ", postfix)
+        print("output: ", output)
         i -= 1
-    # i = 0
-    # while i < len(array):
-    #     prefix = 1 if i == 0 else prefix_array[i-1]
-    #     postfix = 1 if i == len(array) - 1 else postfix_array[i+1]
-    #     output.append(prefix * postfix)
-    #     i += 1
 
-
-    print(prefix_array)
-    print(postfix_array)
     print(output)
     return output
 
